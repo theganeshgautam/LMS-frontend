@@ -19,7 +19,7 @@ const CoAddBook = () => {
 
   const handleSubmit = async(e)=>{
     e.preventDefault()
-    const response = await axios.post('http://localhost:3000/book',{
+    const response = await axios.post('https://lms-backend-q531.onrender.com/book',{
         bookName,
         bookPrice,
         isbnNumber,

@@ -40,7 +40,7 @@ const EditBook = () => {
     formData.append("image", image);
 
     const response = await axios.patch(
-      "http://localhost:3000/book/" + id,
+      "https://lms-backend-q531.onrender.com/book/" + id,
       formData
     );
     if (response.status === 200) {
@@ -51,7 +51,7 @@ const EditBook = () => {
   };
 
   const fetchBook = async () => {
-    const response = await axios.get("http://localhost:3000/book/" + id.id);
+    const response = await axios.get("https://lms-backend-q531.onrender.com/book/" + id.id);
     if (response.status === 200) {
       setData(response.data.data);
     }

@@ -10,7 +10,7 @@ const SingleBook = () => {
   const {id} = useParams()
   
   const fetchBook = async()=>{
-    const response = await axios.get(`http://localhost:3000/book/${id}`)
+    const response = await axios.get(`https://lms-backend-q531.onrender.com/book/${id}`)
     if(response.status===200){
       setBook(response.data.data)
     }
@@ -24,7 +24,7 @@ const SingleBook = () => {
     try {
       const isConfirmed = window.confirm("Are you sure you want to delete this book?");
       if (isConfirmed) {
-        const response = await axios.delete(`http://localhost:3000/book/${id}`);
+        const response = await axios.delete(`https://lms-backend-q531.onrender.com/book/${id}`);
         if (response.status === 200) {
           navigate("/");
           console.log("Book deleted successfully!");
